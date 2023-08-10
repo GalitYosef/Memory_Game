@@ -1,0 +1,54 @@
+body{
+    background: linear-gradient(90deg, rgba(223,102,255,1) 0%, rgba(255,255,255,1) 47%, rgba(255,205,245,1) 100%);
+}
+h1 {
+    text-align: center;
+    font-size: xxx-large;
+    font-family: cursive;
+    font-weight: bolder;
+    animation: crescendo 3.5s alternate infinite ease-in;
+
+}
+#box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+}
+.main {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    border: 2px solid black;
+}
+.back, .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.back {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotateY(180deg);
+}
+.front {
+    background-color: deeppink;
+}
+.NewBtn {
+    margin-top: 3rem;
+    padding: 10px 12px;
+    background-color: rgb(255, 255, 255);
+    color: deeppink;
+    font-weight: bolder;
+    border: 1px solid black;  
+
+}
+@keyframes crescendo {
+    0%   {transform: scale(1);}
+    100% {transform: scale(1.1);}
+  }
